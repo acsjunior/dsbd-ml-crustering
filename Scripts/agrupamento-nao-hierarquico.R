@@ -163,13 +163,16 @@ fviz_cluster(km,
              geom = "point")
 
 # Distância entre os centroides 1 e 2:
-sqrt(sum(km$centers[1,] - km$centers[2,])^2)
+sqrt(sum((km$centers[1,] - km$centers[2,])^2))
+dist(rbind(km$centers[1,],km$centers[2,]))
 
 # Distância entre os centroides 1 e 3:
-sqrt(sum(km$centers[1,] - km$centers[3,])^2)
+sqrt(sum((km$centers[1,] - km$centers[3,])^2))
+dist(rbind(km$centers[1,],km$centers[3,]))
 
 # Distância entre os centroides 2 e 3:
-sqrt(sum(km$centers[2,] - km$centers[3,])^2)
+sqrt(sum((km$centers[2,] - km$centers[3,])^2))
+dist(rbind(km$centers[2,],km$centers[3,]))
 
 
 # Resposta: Verdadeira
